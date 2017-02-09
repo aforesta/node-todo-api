@@ -19,7 +19,7 @@ app.post('/todos', (req, res) => {
     console.log(JSON.stringify(doc, undefined, 2));
     res.send(doc);
   }, (e) => {
-    console.log('Unable to save todo ', e);
+    //console.log('Unable to save todo ', e);
     res.status(400).send(e);
   });
 
@@ -29,7 +29,7 @@ app.listen(3000, () => {
   console.log('Startet on port 3000');
 });
 
-
+module.exports = {app};
 
 // var newTodo = new Todo({
 //   text: 'Cook dinner'
